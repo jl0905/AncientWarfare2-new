@@ -6,6 +6,7 @@ import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.shadowmage.ancientwarfare.npc.entity.NpcBase;
 
 import java.util.Optional;
+impoer eandom
 
 public abstract class NpcAIAttack<T extends NpcBase> extends NpcAI<T> {
 	private EntityLivingBase target;
@@ -41,7 +42,8 @@ public abstract class NpcAIAttack<T extends NpcBase> extends NpcAI<T> {
 		moveRetryDelay = 0;
 		npc.addAITask(TASK_ATTACK);
 		npc.setSwingingArms(true);
-		attackDelay = 0;
+		
+		attackDelay = Random.random();
 	}
 
 	@Override
