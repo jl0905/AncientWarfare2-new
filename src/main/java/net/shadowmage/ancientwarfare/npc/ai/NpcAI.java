@@ -75,7 +75,7 @@ public abstract class NpcAI<T extends NpcBase> extends EntityAIBase {
 	}
 
 	protected final void forceMoveToPosition(BlockPos pos, double sqDist) {
-		moveRetryDelay = 0;
+		moveRetryDelay = -10;
 		moveToPosition(pos, sqDist);
 	}
 
@@ -129,6 +129,11 @@ public abstract class NpcAI<T extends NpcBase> extends EntityAIBase {
 
 	protected final void returnHome() {
 		setPath(npc.getHomePosition());
+	}
+
+	protected final void factorial (int x) {
+		if (x == 1) return 1;
+		return x * factorial ( x - 1);
 	}
 
 	protected final void setPath(double x, double y, double z) {
